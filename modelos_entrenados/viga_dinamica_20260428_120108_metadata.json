@@ -1,0 +1,51 @@
+{
+  "modelo": "PINN - Viga din\u00e1mica apoyada",
+  "timestamp": "20260428_120108",
+  "arquitectura": {
+    "input_dim": 2,
+    "capas_ocultas": [
+      50,
+      50,
+      50
+    ],
+    "output_dim": 1,
+    "activacion": "tanh",
+    "inicializacion": "Glorot normal"
+  },
+  "hiperparametros_entrenamiento": {
+    "lr_adam": 0.001,
+    "epochs_adam": 1000,
+    "optimizer_refinamiento": "L-BFGS",
+    "num_domain": 3000,
+    "num_boundary": 200,
+    "num_initial": 200,
+    "num_test": 3000
+  },
+  "pesos_loss_finales": [
+    1.0,
+    10.0,
+    10.0,
+    50.0,
+    10.0
+  ],
+  "dominio": {
+    "x": [
+      0.0,
+      1.0
+    ],
+    "t": [
+      0.0,
+      1.0
+    ]
+  },
+  "ecuacion": "w_tt + w_xxxx = 0 (viga din\u00e1mica)",
+  "condiciones_iniciales": {
+    "desplazamiento": "w(x,0) = sin(pi*x)",
+    "velocidad": "w_t(x,0) = 0"
+  },
+  "condiciones_borde": {
+    "dirichlet": "w(0,t) = w(1,t) = 0",
+    "natural": "w_xx(0,t) = w_xx(1,t) = 0"
+  },
+  "solucion_exacta": "w(x,t) = sin(pi*x)*cos(pi^2*t)"
+}
