@@ -1,0 +1,22 @@
+# Core numerical stack
+numpy
+pandas
+scipy
+matplotlib
+
+# ML / DL
+torch
+scikit-learn
+
+# Physics-informed and probabilistic tooling
+deepxde
+sbi
+zuko
+scikit-optimize
+kagglehub
+
+# Notebook and workflow tooling
+ipython
+jupyter
+pre-commit
+nbstripout

@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Generated training artifacts
+modelos_entrenados/
+sbi-logs/
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# Generated media
+*.gif
+*.mp4
+
+# Local/cache files
+.cache/
+*.log
+.DS_Store
+Thumbs.db
